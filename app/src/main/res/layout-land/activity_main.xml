@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".MainActivity">
+    android:background="@color/black">
 
     <ImageView
         android:id="@+id/menu_logo"
-        android:layout_width="265dp"
-        android:layout_height="75dp"
+        android:layout_width="391dp"
+        android:layout_height="110dp"
         android:contentDescription="@string/menu_logo"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +20,7 @@
         app:srcCompat="@drawable/menu_logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/constraintLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,50 +31,56 @@
         app:layout_constraintVertical_bias="0.5">
 
         <ImageButton
-            android:id="@+id/menu_difficulty"
-            android:layout_width="170dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@null"
-            android:contentDescription="@string/menu_difficulty_easy"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/menu_exit"
-            app:layout_constraintEnd_toStartOf="@+id/menu_play"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/menu_difficulty_easy" />
-
-        <ImageButton
-            android:id="@+id/menu_play"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:background="@null"
-            android:contentDescription="@string/menu_play"
-            android:scaleType="fitCenter"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu_play" />
-
-        <ImageButton
             android:id="@+id/menu_exit"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginEnd="20dp"
             android:background="@null"
             android:contentDescription="@string/menu_exit"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/menu_info"
-            app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/menu_exit" />
 
         <ImageButton
+            android:id="@+id/menu_score"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:contentDescription="@string/menu_score"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/menu_difficulty"
+            app:srcCompat="@drawable/menu_score" />
+
+        <ImageButton
+            android:id="@+id/menu_difficulty"
+            android:layout_width="111dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:contentDescription="@string/menu_difficulty_easy"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/menu_play"
+            app:srcCompat="@drawable/menu_difficulty_easy" />
+
+        <ImageButton
+            android:id="@+id/menu_play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:contentDescription="@string/menu_play"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/menu_play" />
+
+        <ImageButton
             android:id="@+id/menu_info"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginEnd="20dp"
             android:background="@null"
             android:contentDescription="@string/menu_info"
@@ -85,17 +89,7 @@
             app:layout_constraintEnd_toStartOf="@+id/menu_score"
             app:srcCompat="@drawable/menu_info" />
 
-        <ImageButton
-            android:id="@+id/menu_score"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:background="@null"
-            android:contentDescription="@string/menu_score"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/menu_score" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
