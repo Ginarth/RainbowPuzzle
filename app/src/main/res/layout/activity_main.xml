@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/menu_logo"
-        android:layout_width="265dp"
-        android:layout_height="75dp"
+        android:layout_width="249dp"
+        android:layout_height="80dp"
         android:contentDescription="@string/menu_logo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -34,10 +34,10 @@
 
         <ImageButton
             android:id="@+id/menu_difficulty"
-            android:layout_width="170dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="162dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@null"
             android:contentDescription="@string/menu_difficulty_easy"
             android:scaleType="fitCenter"
@@ -51,8 +51,8 @@
 
         <ImageButton
             android:id="@+id/menu_play"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
             android:background="@null"
             android:contentDescription="@string/menu_play"
             android:scaleType="fitCenter"
@@ -62,9 +62,9 @@
 
         <ImageButton
             android:id="@+id/menu_exit"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="20dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="15dp"
             android:background="@null"
             android:contentDescription="@string/menu_exit"
             android:scaleType="fitCenter"
@@ -75,9 +75,9 @@
 
         <ImageButton
             android:id="@+id/menu_info"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginEnd="20dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="15dp"
             android:background="@null"
             android:contentDescription="@string/menu_info"
             android:scaleType="fitCenter"
@@ -87,8 +87,8 @@
 
         <ImageButton
             android:id="@+id/menu_score"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
             android:background="@null"
             android:contentDescription="@string/menu_score"
             android:scaleType="fitCenter"

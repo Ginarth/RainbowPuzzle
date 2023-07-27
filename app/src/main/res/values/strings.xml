@@ -8,4 +8,6 @@
     <string name="menu_info">About Game</string>
     <string name="menu_logo">Rainbow Puzzle</string>
     <string name="menu_play">Play</string>
+    <string name="info_about">Rainbow Puzzle is a sliding puzzle consisting of numbered square tiles colored in the colors of the rainbow, which is 3 to 5 tile positions high and wide, leaving one unoccupied position. Tiles in the same row or column of an open position can be moved. The goal of the puzzle is to place the tiles in numerical order.</string>
+    <string name="info_back">Back</string>
 </resources>
