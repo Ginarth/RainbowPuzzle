@@ -6,26 +6,24 @@ import android.os.Bundle;
 
 public class PlayActivity extends AppCompatActivity {
 
-    Game game;
-
-    DrawView drawView;
+    public static final String GAME_KEY = "game_key";
+    private Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
-            game = new Game(getIntent().getIntExtra("difficulty", 3));
+            game = new Game(getIntent().getIntExtra(MainActivity.SIZE_KEY, 3));
         } else {
-            game = (Game) savedInstanceState.getSerializable("game");
+            game = (Game) savedInstanceState.getSerializable(GAME_KEY);
         }
 
-        drawView = new DrawView(this, game);
-        setContentView(drawView);
+        setContentView(new DrawView(this, game));
     }
 
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putSerializable("game", game);
+        savedInstanceState.putSerializable(GAME_KEY, game);
         super.onSaveInstanceState(savedInstanceState);
     }
 }

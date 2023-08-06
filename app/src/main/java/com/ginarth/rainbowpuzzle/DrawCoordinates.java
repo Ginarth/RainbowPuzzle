@@ -13,17 +13,17 @@ public class DrawCoordinates {
     public Coordinates[][] getTiles() {
         return tiles;
     }
-    public Coordinates getTime() {
-        return time;
-    }
-    public Coordinates getMoves() {
-        return moves;
-    }
     public Coordinates getBack() {
         return back;
     }
     public Coordinates getRetry() {
         return retry;
+    }
+    public Coordinates getMoves() {
+        return moves;
+    }
+    public Coordinates getTime() {
+        return time;
     }
 
     public DrawCoordinates(int width, int height, int size) {
@@ -68,10 +68,10 @@ public class DrawCoordinates {
                             retry = coordinates;
                             break;
                         case 3:
-                            time = coordinates;
+                            moves = coordinates;
                             break;
                         case 4:
-                            moves = coordinates;
+                            time = coordinates;
                             break;
                     }
                 }
@@ -163,5 +163,41 @@ public class DrawCoordinates {
             y2 = h;
         }
         screen = new Coordinates(x1, y1, x2, y2);
+    }
+}
+
+class Coordinates
+{
+    private final float startX, startY, finishX, finishY;
+
+    public Coordinates(float startX, float startY, float finishX, float finishY) {
+        this.startX = startX;
+        this.startY = startY;
+        this.finishX = finishX;
+        this.finishY = finishY;
+    }
+
+    public float getStartX() {
+        return startX;
+    }
+
+    public float getStartY() {
+        return startY;
+    }
+
+    public float getFinishX() {
+        return finishX;
+    }
+
+    public float getFinishY() {
+        return finishY;
+    }
+
+    public float getWidth() {
+        return finishX - startX;
+    }
+
+    public float getHeight() {
+        return finishY - startY;
     }
 }

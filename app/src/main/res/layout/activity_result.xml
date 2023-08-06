@@ -4,17 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ResultActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5">
+
+        <EditText
+            android:id="@+id/result_name"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:focusedByDefault="true"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="YOUR NAME"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/result_size"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/result_size"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="0 X 0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_name" />
+
+        <TextView
+            android:id="@+id/result_date"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/result_date"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="00.00.00"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/result_size"
+            app:layout_constraintTop_toBottomOf="@+id/result_name" />
+
+        <TextView
+            android:id="@+id/result_moves"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/result_moves"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="0000"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_size" />
+
+        <TextView
+            android:id="@+id/result_time"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/result_time"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="00:00:00"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/result_moves"
+            app:layout_constraintTop_toBottomOf="@+id/result_date" />
+
+        <ImageButton
+            android:id="@+id/result_back"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:contentDescription="@string/result_back"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_moves"
+            app:srcCompat="@drawable/info_back" />
+
+        <ImageButton
+            android:id="@+id/result_save"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:contentDescription="@string/result_save"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/result_back"
+            app:layout_constraintTop_toBottomOf="@+id/result_time"
+            app:srcCompat="@drawable/result_save" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

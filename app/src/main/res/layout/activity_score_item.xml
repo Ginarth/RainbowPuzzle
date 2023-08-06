@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="80dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8.75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_number"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="Number"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="105dp"
+                android:layout_height="35dp"
+                android:contentDescription="Name"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/item_number"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_date"
+                android:layout_width="105dp"
+                android:layout_height="35dp"
+                android:contentDescription="Date"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="00.00.00"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/item_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_moves"
+                android:layout_width="105dp"
+                android:layout_height="35dp"
+                android:contentDescription="Moves"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="000000"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/item_number"
+                app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="105dp"
+                android:layout_height="35dp"
+                android:contentDescription="Time"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/item_moves"
+                app:layout_constraintTop_toBottomOf="@+id/item_date" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

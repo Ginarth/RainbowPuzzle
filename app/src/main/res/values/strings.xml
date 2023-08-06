@@ -1,13 +1,27 @@
 <resources>
     <string name="app_name">RainbowPuzzle</string>
-    <string name="menu_difficulty_easy">Easy Difficulty</string>
-    <string name="menu_difficulty_hard">Hard Difficulty</string>
-    <string name="menu_difficulty_normal">Normal Difficulty</string>
-    <string name="menu_exit">Exit</string>
+
+    <string name="menu_logo">Rainbow Puzzle</string>
+    <string name="menu_size_3">Size 3</string>
+    <string name="menu_size_4">Size 4</string>
+    <string name="menu_size_5">Size 5</string>
+    <string name="menu_play">Play</string>
     <string name="menu_score">High Score</string>
     <string name="menu_info">About Game</string>
-    <string name="menu_logo">Rainbow Puzzle</string>
-    <string name="menu_play">Play</string>
+    <string name="menu_exit">Exit</string>
+
+    <string name="result_size">Size</string>
+    <string name="result_date">Date</string>
+    <string name="result_moves">Moves</string>
+    <string name="result_time">Time</string>
+    <string name="result_back">Back</string>
+    <string name="result_save">Save Result</string>
+
     <string name="info_about">Rainbow Puzzle is a sliding puzzle consisting of numbered square tiles colored in the colors of the rainbow, which is 3 to 5 tile positions high and wide, leaving one unoccupied position. Tiles in the same row or column of an open position can be moved. The goal of the puzzle is to place the tiles in numerical order.</string>
     <string name="info_back">Back</string>
+
+    <string name="score_back">Back</string>
+    <string name="score_size_3">Size 3</string>
+    <string name="score_size_4">Size 4</string>
+    <string name="score_size_5">Size 5</string>
 </resources>

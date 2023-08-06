@@ -1,38 +1,33 @@
 package com.ginarth.rainbowpuzzle;
 
-import android.util.Log;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Game implements Serializable {
-    private final int size;
-    private long startTime;
-    private int moves;
-    private long finishTime;
-    private boolean isComplete;
-    private int[][] tiles;
-
     public int getSize() {
         return size;
     }
-
-    public boolean getIsComplete() {
-        return isComplete;
+    public int getTileValue(int row, int col) {
+        return tiles[row][col];
     }
+    public int getTimeSecs() {
+        if (!this.isComplete() && startTime != 0) {
+            finishTime = (System.currentTimeMillis() - startTime) / 1000;
+        }
 
-    public long getFinishTime() {
-        if (startTime == 0) {
-            return 0;
-        }
-        if (!this.getIsComplete()) {
-            this.finishTime = (System.currentTimeMillis() - startTime) / 1000;
-        }
         if (finishTime > 359999) {
-            return 359999;
+            finishTime = 359999;
         }
-        return finishTime;
+
+        return (int) finishTime;
+    }
+    public String getTimeString() {
+        long time = getTimeSecs();
+        int hours = (int) (time / 3600);
+        int mins = (int) (time % 3600 / 60);
+        int secs = (int) (time % 60);
+        return String.format("%02d:%02d:%02d", hours, mins, secs);
     }
     public int getMoves() {
         if (moves > 9999) {
@@ -40,22 +35,31 @@ public class Game implements Serializable {
         }
         return moves;
     }
-    public int getTileValue(int row, int col) {
-        return tiles[row][col];
-    }
+
+    private final int size;
+    private int[][] tiles;
+    private long startTime, finishTime;
+    private int moves;
 
     public Game(int size) {
         this.size = size;
+        retry();
+    }
+
+    public void retry() {
         this.tiles = new int[size][size];
-        moves = 0;
         startTime = 0;
-        isComplete = false;
+        finishTime = 0;
+        moves = 0;
 
         ArrayList<Integer> values = new ArrayList<Integer>();
         for (int i = size * size - 1; i > 0 ; i--) {
             values.add(i);
         }
-        //Collections.shuffle(values);
+
+        do {
+            Collections.shuffle(values);
+        } while (isComplete());
 
         int val;
         for (int row = 0; row < size; row++) {
@@ -64,6 +68,24 @@ public class Game implements Serializable {
                 this.tiles[row][col] = val;
             }
         }
+    }
+
+    public boolean isComplete() {
+        int counter = 0;
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                counter++;
+                if (row != size - 1 || col != size - 1) {
+                    if (this.tiles[row][col] != counter) {
+                        return false;
+                    }
+                }
+            }
+        }
+
+        if (getMoves() > 0)
+            return true;
+        return false;
     }
 
     public boolean move(int row, int col) {
@@ -90,44 +112,7 @@ public class Game implements Serializable {
             startTime = System.currentTimeMillis();
         }
 
-
         moves++;
-        isComplete = isComplete();
-        return true;
-    }
-
-    public void retry() {
-        startTime = 0;
-        moves = 0;
-        isComplete = false;
-        ArrayList<Integer> values = new ArrayList<Integer>();
-        for (int i = size * size - 1; i > 0 ; i--) {
-            values.add(i);
-        }
-        Collections.shuffle(values);
-
-        int val;
-        for (int row = 0; row < size; row++) {
-            for (int col = 0; col < size; col++) {
-                val = values.size() > 0 ?  values.remove(values.size() - 1) : 0;
-                this.tiles[row][col] = val;
-            }
-        }
-    }
-
-    public boolean isComplete() {
-        Log.d("TerminatorProverator", "check");
-        int counter = 0;
-        for (int row = 0; row < size; row++) {
-            for (int col = 0; col < size; col++) {
-                counter++;
-                if (row != size - 1 || col != size - 1) {
-                    if (this.tiles[row][col] != counter) {
-                        return false;
-                    }
-                }
-            }
-        }
         return true;
     }
 }

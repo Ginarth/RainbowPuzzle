@@ -43,6 +43,18 @@
             app:srcCompat="@drawable/menu_exit" />
 
         <ImageButton
+            android:id="@+id/menu_info"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:contentDescription="@string/menu_info"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/menu_exit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu_info" />
+
+        <ImageButton
             android:id="@+id/menu_score"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -55,16 +67,16 @@
             app:srcCompat="@drawable/menu_score" />
 
         <ImageButton
-            android:id="@+id/menu_difficulty"
+            android:id="@+id/menu_size"
             android:layout_width="135dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:background="@null"
-            android:contentDescription="@string/menu_difficulty_easy"
+            android:contentDescription="@string/menu_size_3"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toEndOf="@+id/menu_score"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu_difficulty_easy" />
+            app:srcCompat="@drawable/menu_size_3" />
 
         <ImageButton
             android:id="@+id/menu_play"
@@ -74,21 +86,9 @@
             android:background="@null"
             android:contentDescription="@string/menu_play"
             android:scaleType="fitCenter"
-            app:layout_constraintStart_toEndOf="@+id/menu_difficulty"
+            app:layout_constraintStart_toEndOf="@+id/menu_size"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/menu_play" />
-
-        <ImageButton
-            android:id="@+id/menu_info"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:background="@null"
-            android:contentDescription="@string/menu_info"
-            android:scaleType="fitCenter"
-            app:layout_constraintStart_toEndOf="@+id/menu_exit"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu_info" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
