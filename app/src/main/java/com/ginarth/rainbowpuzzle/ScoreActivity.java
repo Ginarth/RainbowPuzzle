@@ -7,12 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -58,19 +56,11 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private ArrayList<Record> getRecords() {
-        ArrayList<Record> records = new ArrayList<Record>();
+        ArrayList<Record> records;
         DatabaseAdapter adapter = new DatabaseAdapter(ScoreActivity.this);
         adapter.open();
         records = adapter.take(size);
         adapter.close();
-
-        /*records.add(new Record("p1470n", "06.08.23", 99, 300));
-        records.add(new Record("p1470n", "06.08.23", 99, 300));
-        records.add(new Record("p1470n", "06.08.23", 99, 300));
-        records.add(new Record("p1470n", "06.08.23", 99, 300));
-        records.add(new Record("p1470n", "06.08.23", 99, 300));
-        records.add(new Record("p1470n", "06.08.23", 99, 300));
-        records.add(new Record("p1470n", "06.08.23", 99, 300));*/
         return records;
     }
 

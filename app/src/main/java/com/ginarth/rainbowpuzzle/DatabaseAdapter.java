@@ -4,11 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.provider.ContactsContract;
-import android.util.Log;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class DatabaseAdapter {
 
@@ -37,8 +33,9 @@ public class DatabaseAdapter {
 
     public ArrayList<Record> take(int size) {
         ArrayList<Record> records = new ArrayList<Record>();
-        String command = String.format("SELECT * FROM %s WHERE %s = %d ORDER BY %s",
-                DatabaseHelper.TABLE, DatabaseHelper.COLUMN_SIZE, size, DatabaseHelper.COLUMN_TIME);
+        String command = String.format("SELECT * FROM %s WHERE %s = %d ORDER BY %s, %s",
+                DatabaseHelper.TABLE, DatabaseHelper.COLUMN_SIZE, size,
+                DatabaseHelper.COLUMN_MOVES, DatabaseHelper.COLUMN_TIME);
 
         Cursor cursor = database.rawQuery(command, null);
         int nameInd, dateInd, movesInd, timeInd;
@@ -60,6 +57,8 @@ public class DatabaseAdapter {
 
             } while (cursor.moveToNext());
         }
+
+        cursor.close();
 
         return records;
     }

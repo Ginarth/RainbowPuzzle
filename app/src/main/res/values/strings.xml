@@ -24,4 +24,9 @@
     <string name="score_size_3">Size 3</string>
     <string name="score_size_4">Size 4</string>
     <string name="score_size_5">Size 5</string>
+    <string name="score_number">Number</string>
+    <string name="score_name">Name</string>
+    <string name="score_date">Date</string>
+    <string name="score_moves">Moves</string>
+    <string name="score_time">Time</string>
 </resources>

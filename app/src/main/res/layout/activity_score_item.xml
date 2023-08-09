@@ -2,89 +2,85 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="280dp"
-    android:layout_height="80dp">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="8.75dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/item_number"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:contentDescription="Number"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/score_number"
                 android:fontFamily="@font/nunito_bold"
-                android:gravity="center"
-                android:text="00"
-                android:textAlignment="center"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
-                android:textSize="48sp"
+                android:textSize="40sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/item_name"
-                android:layout_width="105dp"
-                android:layout_height="35dp"
-                android:contentDescription="Name"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/score_name"
                 android:fontFamily="@font/nunito_bold"
                 android:gravity="center"
-                android:text="000000"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/item_number"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/item_date"
-                android:layout_width="105dp"
-                android:layout_height="35dp"
-                android:contentDescription="Date"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/score_date"
                 android:fontFamily="@font/nunito_bold"
                 android:gravity="center"
-                android:text="00.00.00"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/item_name"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/item_moves"
-                android:layout_width="105dp"
-                android:layout_height="35dp"
-                android:contentDescription="Moves"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/score_moves"
                 android:fontFamily="@font/nunito_bold"
                 android:gravity="center"
-                android:text="000000"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/item_number"
                 app:layout_constraintTop_toBottomOf="@+id/item_name" />
 
             <TextView
                 android:id="@+id/item_time"
-                android:layout_width="105dp"
-                android:layout_height="35dp"
-                android:contentDescription="Time"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/score_time"
                 android:fontFamily="@font/nunito_bold"
                 android:gravity="center"
-                android:text="00:00:00"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/item_moves"
                 app:layout_constraintTop_toBottomOf="@+id/item_date" />
 

@@ -14,7 +14,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,15 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
-
-                        /*Toast.makeText(getApplicationContext(), String.format(
-                                "%s %d %d %d %s",
-                                data.getStringExtra(ResultActivity.NAME_KEY),
-                                data.getIntExtra(SIZE_KEY, -1),
-                                data.getIntExtra(DrawView.MOVES_KEY, -1),
-                                data.getIntExtra(DrawView.TIME_KEY, -1),
-                                data.getStringExtra(ResultActivity.DATE_KEY)
-                        ), Toast.LENGTH_LONG).show();*/
 
                         if (data != null) {
                             DatabaseAdapter adapter = new DatabaseAdapter(MainActivity.this);
